@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees Data Entry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>New Employees</h1>
+    <form id="employee-form" method="post">
+        <div class="Inputs">
+            <span>
+                <div>
+                    <label for="empname">Enter Name</label>
+                </div>
+
+                <div>
+                    <input type="text" name="empname" id="empname" oninput="validateInput(this)">
+                </div>
+            </span>
+            <span>
+                <div>    
+                    <label for= "profession">Enter Profession</label>
+                </div>
+
+                <div>
+                    <input type="text" name="profession" id="profession" oninput="validateInput(this)">
+                </div>
+            </span>
+            <span>
+                <div>    
+                    <label for="age">Enter Age</label>
+                </div>
+
+                <div>
+                    <input type="number" name="age" id="age" min="18" max="100" >
+                </div>
+            </span>
+        </div>
+
+        <div>
+            <button type="submit" id="submit">Add User</button>
+        </div>
+    </form>
+
+    <div id="notification"></div>
+    <div id="addedEmployees">
+        <h2>Added Employees</h2>
+        <section><p>You have 0 Employees</p></section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
